@@ -1,17 +1,17 @@
-name: Build Angular App
+name: Build and Deploy Angular App
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
-  build-angular:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup Node JS
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: 18.x
@@ -21,3 +21,9 @@ jobs:
 
     - name: Build
       run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist/MyShoes-Frontend
