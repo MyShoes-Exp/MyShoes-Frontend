@@ -14,16 +14,20 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 18.x
+        node-version: 18.19.0
+
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
 
     - name: Install dependencies
       run: npm install
 
     - name: Build
-      run: npm run build
+      run: ng build --output-path=docs --base-href=/MyShoes-Frontend/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs
+        cname: yamathe5.com
