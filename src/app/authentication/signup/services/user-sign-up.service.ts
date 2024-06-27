@@ -8,7 +8,7 @@ import {Collection} from "../../../collection/model/collection";
   providedIn: 'root'
 })
 export class UserSignUpService {
-  basePath = 'https://myshoesbackend-production.up.railway.app/api/v1/users';
+  basePath = 'https://myshoes.azurewebsites.net/api/v1/users';
 
   httpOptions = {
     headers: new HttpHeaders({

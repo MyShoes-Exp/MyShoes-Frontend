@@ -7,7 +7,7 @@ import {Collection} from '../model/collection';
   providedIn: 'root'
 })
 export class CollectionService {
-  basePath = 'https://myshoesbackend-production.up.railway.app/api/v1/collections';
+  basePath = 'https://myshoes.azurewebsites.net/api/v1/collections';
 
   httpOptions = {
     headers: new HttpHeaders({

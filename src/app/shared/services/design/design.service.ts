@@ -7,7 +7,7 @@ import {design} from "../../../design/model/design";
   providedIn: 'root'
 })
 export class DesignService {
-  basePath = 'https://myshoesbackend-production.up.railway.app/api/v1/design';
+  basePath = 'https://myshoes.azurewebsites.net/api/v1/design';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json',

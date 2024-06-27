@@ -7,7 +7,7 @@ import {User} from "../../../shared/model/user";
   providedIn: 'root'
 })
 export class UserLoginService {
-  basePath = 'https://myshoesbackend-production.up.railway.app/api/v1/users';
+  basePath = 'https://myshoes.azurewebsites.net/api/v1/users';
 
   httpOptions = {
     headers: new HttpHeaders({

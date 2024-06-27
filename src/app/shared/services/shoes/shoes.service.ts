@@ -6,7 +6,7 @@ import {catchError, retry, throwError} from "rxjs";
   providedIn: 'root'
 })
 export class ShoesService {
-  basePath = 'https://myshoesbackend-production.up.railway.app/api/v1/shoes';
+  basePath = 'https://myshoes.azurewebsites.net/api/v1/shoes';
 
   httpOptions = {
     headers: new HttpHeaders({
